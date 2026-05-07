@@ -5,9 +5,9 @@
 }
 
 body {
-    background: #09040a;
+    background: var(--bg);
 
-    color: #f5edf3;
+    color: var(--text);
 
     font-family: 'Syne', sans-serif;
 
@@ -25,6 +25,10 @@ body {
 
     --text: #f5edf3;
 
+    --text-secondary: #cab6c2;
+
+    --text-muted: #8b6f7d;
+
     --nav-bg: rgba(9, 4, 10, 0.7);
 
     --border: rgba(255,45,155,0.15);
@@ -37,25 +41,69 @@ body {
 
     --blue-glow: rgba(0,120,255,0.12);
 
+    --scanline: rgba(255,45,155,0.015);
+
+    --toggle-bg:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.015)
+    );
+
+    --toggle-border: rgba(255,255,255,0.08);
+
+    --toggle-label: rgba(255,255,255,0.55);
+
+    --toggle-orb:
+    radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.45),
+        rgba(255,255,255,0.08)
+    );
+
 }
 
 body.light-mode {
 
-    --bg: #f6f3ff;
+    --bg: #f5f1f7;
 
-    --text: #120d16;
+    --text: #161218;
 
-    --nav-bg: rgba(255,255,255,0.55);
+    --nav-bg: rgba(255,255,255,0.72);
 
-    --border: rgba(255,45,155,0.18);
+    --border: rgba(255,45,155,0.22);
 
     --accent: #ff2d9b;
 
-    --grid: rgba(0,0,0,0.06);
+    --grid: rgba(0,0,0,0.18);
 
-    --pink-glow: rgba(255,45,155,0.10);
+    --pink-glow: rgba(255,45,155,0.14);
 
     --blue-glow: rgba(0,120,255,0.10);
+
+    --scanline: rgba(0,0,0,0.045);
+
+    --text-secondary: #5b4d57;
+
+    --text-muted: #7d6d78;
+
+    --toggle-bg:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.9),
+            rgba(255,255,255,0.6)
+        );
+
+        --toggle-border: rgba(0,0,0,0.08);
+
+        --toggle-label: rgba(0,0,0,0.55);
+
+        --toggle-orb:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,1),
+            rgba(255,255,255,0.75)
+        );
 
 }
 /* SCANLINE OVERLAY */
@@ -72,8 +120,8 @@ body::before {
         0deg,
         transparent,
         transparent 2px,
-        rgba(255,45,155,0.015) 2px,
-        rgba(255,45,155,0.015) 4px
+        var(--scanline) 2px,
+        var(--scanline) 4px
     );
 
     pointer-events: none;
@@ -117,11 +165,11 @@ body::after {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(9, 4, 10, 0.7);
+    background: var(--nav-bg);
 
     backdrop-filter: blur(20px);
 
-    border-bottom: 1px solid rgba(255, 45, 155, 0.15);
+    border-bottom: 1px solid var(--border);
 
     z-index: 1000;
 }
@@ -154,13 +202,13 @@ body::after {
 }
 
 .nav-logo span {
-    color: #f5edf3;
+    color: var(--text);
 }
 
 .nav-center a {
     text-decoration: none;
 
-    color: #cab6c2;
+    color: var(--text-secondary);
 
     font-family: 'Space Mono', monospace;
 
@@ -170,7 +218,7 @@ body::after {
 }
 
 .nav-center a:hover {
-    color: #ff2d9b;
+   color: var(--accent)
 }
 
 /* RESUME BUTTON */
@@ -215,14 +263,9 @@ body::after {
 
     border-radius: 999px;
 
-    background:
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,0.06),
-        rgba(255,255,255,0.015)
-    );
+    background: var(--toggle-bg);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--toggle-border);
 
     backdrop-filter: blur(20px);
 
@@ -254,12 +297,7 @@ body::after {
 
     border-radius: 50%;
 
-    background:
-    radial-gradient(
-        circle at top left,
-        rgba(255,255,255,0.45),
-        rgba(255,255,255,0.08)
-    );
+    background: var(--toggle-orb);
 
     border: 1px solid rgba(255,255,255,0.12);
 
@@ -286,13 +324,13 @@ body::after {
 
     font-family: 'Space Mono', monospace;
 
-    color: rgba(255,255,255,0.55);
+    color: var(--toggle-label);
 
     transition: 0.3s ease;
 }
 
 .active-theme {
-    color: white;
+    color: var(--text);
 }
 
 /*HERO SECTION*/
@@ -317,13 +355,13 @@ body::after {
     background-image:
 
     linear-gradient(
-        rgba(255,255,255,0.045) 1px,
+        var(--grid) 1px,
         transparent 1px
     ),
 
     linear-gradient(
         90deg,
-        rgba(255,255,255,0.045) 1px,
+        var(--grid) 1px,
         transparent 1px
     );
 
@@ -348,7 +386,7 @@ body::after {
     background:
     radial-gradient(
         circle,
-        rgba(255,45,155,0.12),
+       var(--pink-glow),
         transparent 70%
     );
 
@@ -371,7 +409,7 @@ body::after {
     background:
     radial-gradient(
         circle,
-        rgba(0,120,255,0.12),
+        var(--blue-glow),
         transparent 70%
     );
 
@@ -387,4 +425,21 @@ body::after {
     position: relative;
 
     z-index: 5;
+}
+
+body,
+.navbar,
+section,
+.project-card,
+.skill-category,
+.about-card,
+.contact-link,
+input,
+textarea,
+.toggle-track,
+.toggle-thumb {
+    transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
 }
