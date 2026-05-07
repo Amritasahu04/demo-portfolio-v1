@@ -88,22 +88,22 @@ body.light-mode {
     --text-muted: #7d6d78;
 
     --toggle-bg:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.9),
-            rgba(255,255,255,0.6)
-        );
+    linear-gradient(
+        135deg,
+        #eceaf1,
+        #e2dee8
+    );
 
-        --toggle-border: rgba(0,0,0,0.08);
+    --toggle-border: rgba(0,0,0,0.08);
 
-        --toggle-label: rgba(0,0,0,0.55);
+    --toggle-label: rgba(0,0,0,0.55);
 
-        --toggle-orb:
-        radial-gradient(
-            circle at top left,
-            rgba(255,255,255,1),
-            rgba(255,255,255,0.75)
-        );
+    --toggle-orb:
+    radial-gradient(
+        circle at top left,
+        #ffffff,
+        #d9d6de
+    );
 
 }
 /* SCANLINE OVERLAY */
@@ -278,8 +278,8 @@ body::after {
     overflow: visible;
 
     box-shadow:
-    inset 0 1px 1px rgba(255,255,255,0.05),
-    0 0 30px rgba(255,45,155,0.08);
+    inset 0 1px 2px rgba(255,255,255,0.8),
+    0 6px 18px rgba(0,0,0,0.08);
 }
 
 /* FLOATING GLASS ORB */
@@ -304,8 +304,8 @@ body::after {
     backdrop-filter: blur(25px);
 
     box-shadow:
-    inset 0 2px 10px rgba(255,255,255,0.12),
-    0 0 35px rgba(255,45,155,0.18);
+    inset 0 2px 8px rgba(255,255,255,0.12),
+    0 4 14px rgba(0,0,0,0.12);
 
     z-index: 1;
 
