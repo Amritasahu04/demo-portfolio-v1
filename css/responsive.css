@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+
+    body {
+        cursor: auto;
+    }
+
+    .butterfly-cursor {
+        display: none;
+    }
+}

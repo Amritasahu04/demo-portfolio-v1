@@ -1,0 +1,44 @@
+.wing {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+/* TOP WINGS */
+
+.left-wing-top,
+.right-wing-top {
+    animation: topFlutter 1.2s ease-in-out infinite;
+}
+
+/* BOTTOM WINGS */
+
+.left-wing-bottom,
+.right-wing-bottom {
+    animation: bottomFlutter 1.2s ease-in-out infinite;
+}
+
+/* TOP FLUTTER */
+
+@keyframes topFlutter {
+
+    0%,100% {
+        transform: scaleY(1) scaleX(1);
+    }
+
+    50% {
+        transform: scaleY(0.92) scaleX(1.03);
+    }
+}
+
+/* BOTTOM FLUTTER */
+
+@keyframes bottomFlutter {
+
+    0%,100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.96);
+    }
+}

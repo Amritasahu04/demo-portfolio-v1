@@ -2,30 +2,24 @@ const toggle = document.querySelector(".glass-toggle");
 
 const thumb = document.querySelector(".toggle-thumb");
 
-const labels = document.querySelectorAll(".toggle-label");
+const label = document.querySelector(".toggle-label");
 
-let lightMode = false;
+let isDark = true; // starts in dark mode
 
 toggle.addEventListener("click", () => {
 
-    lightMode = !lightMode;
+    isDark = !isDark;
 
-    document.body.classList.toggle("light-mode");
+    /* THEME SWITCH */
 
-    if (lightMode) {
-        thumb.style.right = "74px";
-    } else {
-        thumb.style.right = "4px";
-    }
+    document.body.classList.toggle("light-mode", !isDark);
 
-    labels.forEach(label => {
-        label.classList.remove("active-theme");
-    });
+    /* THUMB MOVEMENT */
 
-    if (lightMode) {
-        labels[0].classList.add("active-theme");
-    } else {
-        labels[1].classList.add("active-theme");
-    }
+    thumb.style.left = isDark ? "3px" : "59px";
+
+    /* LABEL TEXT */
+
+    label.textContent = isDark ? "Dark" : "Light";
 
 });

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none !important;
 }
 
 body {
@@ -442,4 +443,49 @@ textarea,
     background 0.4s ease,
     color 0.4s ease,
     border-color 0.4s ease;
+}
+
+body {
+    cursor: none;
+}
+
+.butterfly-cursor {
+    position: fixed;
+
+    width: 60px;
+    height: 60px;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transform: translate(-50%, -50%);
+
+    mix-blend-mode: screen;
+}
+
+.butterfly-svg {
+    width: 72px;
+    height: 72px;
+
+    overflow: visible;
+
+     filter:
+        drop-shadow(0 0 6px rgba(255,45,155,0.45))
+        drop-shadow(0 0 16px rgba(255,45,155,0.22));
+
+    opacity: 0.95;
+}
+
+.wing {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.left-wing {
+    animation: flapLeft 0.8s ease-in-out infinite;
+}
+
+.right-wing {
+    animation: flapRight 0.8s ease-in-out infinite;
 }
