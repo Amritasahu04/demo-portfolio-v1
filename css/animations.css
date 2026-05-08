@@ -83,3 +83,12 @@
         transform: scale(0) translateY(8px);
     }
 }
+
+body.light-mode .sparkle {
+
+    background: #ff2d9b;
+
+    box-shadow:
+        0 0 4px rgba(255,45,155,0.35),
+        0 0 8px rgba(255,45,155,0.18);
+}

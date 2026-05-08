@@ -1,8 +1,7 @@
 const toggle = document.querySelector(".glass-toggle");
 
 const thumb = document.querySelector(".toggle-thumb");
-
-const label = document.querySelector(".toggle-label");
+const labels = document.querySelectorAll(".toggle-label");
 
 let isDark = true; // starts in dark mode
 
@@ -10,16 +9,21 @@ toggle.addEventListener("click", () => {
 
     isDark = !isDark;
 
-    /* THEME SWITCH */
+    document.body.classList.toggle(
+        "light-mode",
+        !isDark
+    );
 
-    document.body.classList.toggle("light-mode", !isDark);
+    thumb.style.right =
+        isDark ? "4px" : "82px";
 
-    /* THUMB MOVEMENT */
+    labels[0].classList.toggle(
+        "active-theme",
+        !isDark
+    );
 
-    thumb.style.left = isDark ? "3px" : "59px";
-
-    /* LABEL TEXT */
-
-    label.textContent = isDark ? "Dark" : "Light";
-
+    labels[1].classList.toggle(
+        "active-theme",
+        isDark
+    );
 });

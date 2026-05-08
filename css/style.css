@@ -308,7 +308,7 @@ body::after {
     inset 0 2px 8px rgba(255,255,255,0.12),
     0 4 14px rgba(0,0,0,0.12);
 
-    z-index: 1;
+    z-index: 2;
 
     transition: all 0.45s ease;
 }
@@ -319,7 +319,7 @@ body::after {
 .toggle-label {
     position: relative;
 
-    z-index: 2;
+    z-index: 5;
 
     font-size: 0.82rem;
 
@@ -461,7 +461,7 @@ body {
 
     transform: translate(-50%, -50%);
 
-    mix-blend-mode: screen;
+    mix-blend-mode: normal;
 }
 
 .butterfly-svg {
@@ -475,6 +475,15 @@ body {
         drop-shadow(0 0 16px rgba(255,45,155,0.22));
 
     opacity: 0.95;
+}
+
+body.light-mode .butterfly-svg {
+
+    filter:
+        drop-shadow(0 0 3px rgba(255,45,155,0.18))
+        drop-shadow(0 0 10px rgba(255,45,155,0.12));
+
+    opacity: 1;
 }
 
 .wing {
