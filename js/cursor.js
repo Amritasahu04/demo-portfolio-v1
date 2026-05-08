@@ -11,6 +11,31 @@ document.addEventListener("mousemove", (e) => {
     mouseY = e.clientY;
 });
 
+const sparkleContainer = document.getElementById("sparkle-container");
+
+function createSparkle(x, y) {
+
+    const sparkle = document.createElement("div");
+
+    sparkle.classList.add("sparkle");
+
+    sparkle.style.left =
+        x + (Math.random() * 12 - 6) + "px";
+
+    sparkle.style.top =
+        y + (Math.random() * 12 - 6) + "px";
+
+    sparkle.style.width =
+        sparkle.style.height =
+        Math.random() * 4 + 2 + "px";
+
+    sparkleContainer.appendChild(sparkle);
+
+    setTimeout(() => {
+        sparkle.remove();
+    }, 700);
+}
+
 function animateButterfly() {
 
     currentX += (mouseX - currentX) * 0.15;
@@ -18,6 +43,10 @@ function animateButterfly() {
 
     butterfly.style.left = currentX + "px";
     butterfly.style.top = currentY + "px";
+
+    if (Math.random() > 0.7) {
+    createSparkle(currentX, currentY);
+    }
 
     requestAnimationFrame(animateButterfly);
 }
