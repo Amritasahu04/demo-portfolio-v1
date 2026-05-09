@@ -925,7 +925,7 @@ h2 {
 
   font-size: clamp(3rem, 5vw, 4.8rem);
 
-  font-weight: 800;
+  font-weight: 700;
 
   line-height: 0.9;
 
@@ -938,8 +938,34 @@ h2 span {
   color: var(--accent);
 }
 
-.section-tag{
-    color: var(--text);
+.section-tag {
+  font-family: 'Space Mono', monospace;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color: var(--accent);
+
+  margin-bottom: 24px;
+
+  opacity: 0.9;
+
+  transform: translateX(2px);
+}
+
+.section-tag::before {
+  content: '##';
+
+  color: #ffffff;
+
+  margin-right: 10px;
+
+  opacity: 0.9;
 }
 
 /* SKILLS */
