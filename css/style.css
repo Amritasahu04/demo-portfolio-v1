@@ -346,7 +346,7 @@ body::after {
 #hero {
     height: 100vh;
 
-    padding: 90px 6% 40px;
+    padding: 90px 6% 10px;
 
     display: flex;
 
@@ -755,15 +755,27 @@ body.light-mode .butterfly-svg {
 
 /* ABOUT */
 #about {
-  background: var(--bg2);
-  padding: 140px 6%;
+  background: var(--bg);
+
+  padding: 60px 5%;
+
+  max-width: 1600px;
+
+  margin: 0 auto;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+
+  grid-template-columns: 0.9fr 0.8fr;
+
+  gap: 60px;
+
   align-items: start;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
 }
 
 .about-text {
@@ -773,7 +785,7 @@ body.light-mode .butterfly-svg {
 .about-text p {
   color: #d2c6cf;
   line-height: 1.9;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 32px;
   font-weight: 400;
 }
@@ -799,7 +811,7 @@ body.light-mode .butterfly-svg {
   gap: 16px;
 
   font-family: var(--mono);
-  font-size: 16px;
+  font-size: 14px;
 
   color: #c7b7c2;
 
@@ -918,15 +930,17 @@ body.light-mode .butterfly-svg {
 h2 {
   font-family: var(--sans);
 
-  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
 
   font-weight: 700;
 
-  line-height: 0.9;
+  line-height: 1.05;
 
-  letter-spacing: -0.06em;
+  letter-spacing: -0.03em;
 
   color: var(--text);
+
+  margin-bottom: 10px;
 }
 
 h2 span {
@@ -946,7 +960,7 @@ h2 span {
 
   color: var(--accent);
 
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 
   opacity: 0.9;
 
@@ -965,7 +979,7 @@ h2 span {
 
 /* SKILLS */
 #skills {
-  padding: 110px 6%;
+  padding: 90px 6%;
 }
 
 .skills-grid {
@@ -985,13 +999,13 @@ h2 span {
 
   border-radius: 22px;
 
-  padding: 22px;
+  padding: 15px;
 
   backdrop-filter: blur(18px);
 
   transition: 0.35s ease;
 
-  min-height: 210px;
+  min-height: 190px;
 
    transition-delay: 0.15s;
 }
@@ -1122,7 +1136,7 @@ h2 span {
 .mountain-divider {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 110px;
     overflow: hidden;
     background: var(--bg);
     line-height: 0;
@@ -1275,7 +1289,15 @@ body.light-mode .mountain-divider path:first-child {
 
 #projects h2 {
 
-    font-size: clamp(4rem, 8vw, 7rem);
+     font-size: clamp(2rem, 3.5vw, 3.2rem);
 
     line-height: 0.88;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 110px;
 }
