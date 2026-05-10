@@ -1163,7 +1163,7 @@ body.light-mode .mountain-divider path:first-child {
 
 @keyframes driftSlow {
     from {
-        transform: translateX(0);
+        (0);
     }
     to {
         transform: translateX(-120px);
@@ -1181,15 +1181,19 @@ body.light-mode .mountain-divider path:first-child {
 
 .project-controls {
 
-    position: absolute;
-
-    bottom: -20px;
+    position: relative;
 
     display: flex;
 
+    justify-content: center;
+
+    align-items: center;
+
     gap: 18px;
 
-    z-index: 10;
+    margin-top: 42px;
+
+    z-index: 20;
 }
 
 .project-btn {
@@ -1230,27 +1234,30 @@ body.light-mode .mountain-divider path:first-child {
 }
 
 .project-content {
-    height: 100%;
-
     display: flex;
+
     flex-direction: column;
-    justify-content: space-between;
+
+    justify-content: flex-start;
+
+    gap: 18px;
+
+    height: auto;
 }
 
 .project-content h3 {
 
-    font-size: 2.3rem;
+    font-size: 1.7rem;
 
     line-height: 1;
 
     margin-bottom: 18px;
 
-    max-width: 80%;
 }
 
 .project-desc {
 
-    max-width: 82%;
+    max-width: 100%;
 
     line-height: 1.8;
 
@@ -1292,6 +1299,53 @@ body.light-mode .mountain-divider path:first-child {
      font-size: clamp(2rem, 3.5vw, 3.2rem);
 
     line-height: 0.88;
+}
+
+.project-links {
+
+    position: absolute;
+
+    top: 26px;
+
+    right: 28px;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    z-index: 10;
+}
+
+.project-links a {
+
+    color: rgba(255,255,255,0.88);
+
+    text-decoration: none;
+
+    font-family: var(--mono);
+
+    font-size: 0.82rem;
+
+    padding: 10px 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(255,255,255,0.03);
+
+    transition: 0.25s ease;
+}
+
+.project-links a:hover {
+
+    color: white;
+
+    border-color: rgba(255,45,155,0.3);
+
+    background: rgba(255,45,155,0.08);
 }
 
 html {

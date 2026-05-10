@@ -605,18 +605,53 @@
             </div>
 
             <div class="projects-stack">
-                <div class="project-controls">
 
-                    <button class="project-btn prev-btn">
-                        ←
-                    </button>
+              <div class="project-card next">
 
-                    <button class="project-btn next-btn">
-                        →
-                    </button>
+                    <div class="project-top">
 
-                </div>
+                        <div class="project-icon">
+                            ⚡
+                        </div>
 
+                        <div class="project-links">
+                            <a href="#">GitHub ↗</a>
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Real-Time Collaborative Code Editor
+                        </h3>
+
+                        <p class="project-desc">
+                            A collaborative editor supporting simultaneous multi-user coding with OT/CRDT 
+                            conflict resolution, real-time cursor synchronization, 
+                            and Docker-based sandboxed code execution. Built with React,
+                             Monaco Editor, WebSockets, Node.js, Redis, and PostgreSQL
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>React</span>
+                            <span>Monaco Editor</span>
+                            <span>WebSockets</span>
+                            <span>Node.js</span>
+                            <span>Redis</span>
+                            <span>PostgreSQL</span>
+
+                        </div>
+
+                        <div class="project-highlight">
+                            ✦ &lt;50ms sync latency · conflict-free editing
+                        </div>
+
+                    </div>
+
+                </div>  
+                
                 <!-- VELORA -->
 
                 <div class="project-card active">
@@ -639,9 +674,9 @@
                         <h3>Velora</h3>
 
                         <p class="project-desc">
-                            An AI-powered social hub for engineers where users
-                            collaborate, discuss ideas, solve problems, and interact
-                            in real-time chatrooms with integrated AI assistance.
+                            An AI-powered real-time collaboration hub for engineers. 
+                            Built with the MERN stack featuring JWT auth, Socket.IO messaging,
+                             topic-based rooms, online presence, and an integrated AI assistant — where teams collaborate, discuss ideas, and solve problems together.
                         </p>
 
                         <div class="project-tech">
@@ -667,52 +702,7 @@
 
                 <!-- CODE EDITOR -->
 
-                <div class="project-card next">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            ⚡
-                        </div>
-
-                        <div class="project-links">
-                            <a href="#">GitHub ↗</a>
-                        </div>
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            Real-Time Collaborative Code Editor
-                        </h3>
-
-                        <p class="project-desc">
-                            A collaborative editor supporting simultaneous
-                            multi-user coding with OT/CRDT conflict resolution,
-                            real-time cursor synchronization, and Docker-based
-                            sandboxed code execution.
-                        </p>
-
-                        <div class="project-tech">
-
-                            <span>React</span>
-                            <span>Monaco Editor</span>
-                            <span>WebSockets</span>
-                            <span>Node.js</span>
-                            <span>Redis</span>
-                            <span>PostgreSQL</span>
-
-                        </div>
-
-                        <div class="project-highlight">
-                            ✦ &lt;50ms sync latency · 20+ concurrent users ·
-                            conflict-free editing
-                        </div>
-
-                    </div>
-
-                </div>
+                
 
                 <!-- RATE LIMITER -->
 
@@ -737,9 +727,10 @@
                         </h3>
 
                         <p class="project-desc">
-                            A distributed API gateway implementing token bucket
-                            and sliding window algorithms with Redis-backed
-                            synchronization across Kubernetes deployments.
+                            A distributed API gateway implementing token bucket and 
+                            sliding window algorithms with Redis-backed synchronization 
+                            across Kubernetes deployments.
+                             Built with Node.js, Redis, Docker, Kubernetes, and Prometheus 
                         </p>
 
                         <div class="project-tech">
@@ -762,6 +753,17 @@
                 </div>
 
             </div>
+            <div class="project-controls">
+
+                    <button class="project-btn prev-btn">
+                        ←
+                    </button>
+
+                    <button class="project-btn next-btn">
+                        →
+                    </button>
+
+                </div>
 
     </section>
 
