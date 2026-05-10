@@ -83,13 +83,13 @@ body.light-mode {
 
     --accent: #ff2d9b;
 
-    --grid: rgba(0,0,0,0.18);
+    --grid: rgba(0,0,0,0.07);
 
-    --pink-glow: rgba(255,45,155,0.14);
+    --pink-glow: rgba(255,45,155,0.08);
 
-    --blue-glow: rgba(0,120,255,0.10);
+    --blue-glow: rgba(120,120,255,0.05);
 
-    --scanline: rgba(0,0,0,0.045);
+    --scanline: rgba(255,45,155,0.008);
 
     --text-secondary: #5b4d57;
 
@@ -504,7 +504,7 @@ body::after {
 
     font-weight: 800;
 
-    color: #f5edf3;
+    color: var(--text);
 }
 
 .hero-line2 {
@@ -530,7 +530,7 @@ body::after {
 
     line-height: 1.55;
 
-    color: #c8bcc5;
+    color: var(--text-secondary);
 
     margin-bottom: 28px;
 }
@@ -570,7 +570,7 @@ body::after {
 .secondary-btn {
     border: 1px solid rgba(255,45,155,0.25);
 
-    color: #f5edf3;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -610,7 +610,7 @@ body::after {
 .stat-box p {
     margin-top: 8px;
 
-    color: #85707c;
+     color: var(--text-muted);
 
     font-size: 1rem;
 }
@@ -783,7 +783,7 @@ body.light-mode .butterfly-svg {
 }
 
 .about-text p {
-  color: #d2c6cf;
+  color: var(--text-secondary);
   line-height: 1.9;
   font-size: 14px;
   margin-bottom: 32px;
@@ -813,7 +813,7 @@ body.light-mode .butterfly-svg {
   font-family: var(--mono);
   font-size: 14px;
 
-  color: #c7b7c2;
+  color: var(--text-secondary);
 
   letter-spacing: 0.02em;
 }
@@ -826,6 +826,7 @@ body.light-mode .butterfly-svg {
 
 .about-card {
   background: rgba(29,11,27,0.72);
+  background: color-mix(in srgb, var(--bg) 88%, white 12%);
 
   border: 1px solid var(--border);
 
@@ -970,7 +971,7 @@ h2 span {
 .section-tag::before {
   content: '##';
 
-  color: #ffffff;
+  color: var(--text-muted);
 
   margin-right: 10px;
 
@@ -994,6 +995,7 @@ h2 span {
 
 .skill-card {
   background: rgba(29,11,27,0.72);
+  background: color-mix(in srgb, var(--bg) 88%, white 12%);
 
   border: 1px solid var(--border);
 
@@ -1074,7 +1076,7 @@ h2 span {
 
   height: 5px;
 
-  background: rgba(255,255,255,0.06);
+  background: color-mix(in srgb, var(--bg) 88%, white 12%);
 
   border-radius: 999px;
 
@@ -1114,7 +1116,7 @@ h2 span {
 
   border: 1px solid rgba(255,45,155,0.14);
 
-  background: rgba(255,255,255,0.015);
+  background: color-mix(in srgb, var(--bg) 92%, white 8%);
 
   font-family: var(--mono);
 
@@ -1261,7 +1263,7 @@ body.light-mode .mountain-divider path:first-child {
 
     line-height: 1.8;
 
-    color: #cdbdca;
+    color: var(--text-secondary);
 
     font-size: 1rem;
 }
@@ -1320,7 +1322,7 @@ body.light-mode .mountain-divider path:first-child {
 
 .project-links a {
 
-    color: rgba(255,255,255,0.88);
+    background: color-mix(in srgb, var(--bg) 90%, white 10%);
 
     text-decoration: none;
 
@@ -1332,7 +1334,7 @@ body.light-mode .mountain-divider path:first-child {
 
     border-radius: 14px;
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--border);
 
     background: rgba(255,255,255,0.03);
 
@@ -1393,7 +1395,7 @@ section {
 
 .contact-left p {
 
-    color: var(--muted);
+   color: var(--text-secondary);
 
     line-height: 1.9;
 
@@ -1423,13 +1425,14 @@ section {
 
     border-radius: 18px;
 
-    background: rgba(255,255,255,0.03);
+    background: rgba(29,11,27,0.72);
+    background: color-mix(in srgb, var(--bg) 88%, white 12%);
 
     border: 1px solid rgba(255,255,255,0.06);
 
     text-decoration: none;
 
-    color: white;
+    color: var(--text);
 
     transition: 0.3s ease;
 }
@@ -1483,7 +1486,7 @@ section {
 
     border-radius: 16px;
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--border);
 
     background: rgba(255,255,255,0.03);
 

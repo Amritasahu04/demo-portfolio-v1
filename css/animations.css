@@ -165,7 +165,8 @@ body.light-mode .sparkle {
 
     border-radius: 28px;
 
-    background: rgba(32, 10, 35, 0.92);
+    background: rgba(29,11,27,0.72);
+background: color-mix(in srgb, var(--bg) 88%, white 12%);
 
     border: 1px solid rgba(255,45,155,0.12);
 
@@ -431,8 +432,8 @@ body.light-mode .sparkle {
 
     border-radius: 24px;
 
-    background:
-        rgba(255,255,255,0.03);
+    background: rgba(29,11,27,0.72);
+background: color-mix(in srgb, var(--bg) 88%, white 12%);
 
     border:
         1px solid rgba(255,45,155,0.12);
