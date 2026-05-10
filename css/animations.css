@@ -92,3 +92,36 @@ body.light-mode .sparkle {
         0 0 4px rgba(255,45,155,0.35),
         0 0 8px rgba(255,45,155,0.18);
 }
+
+.reveal-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.reveal-content {
+    opacity: 0;
+    transform: translateY(90px);
+    transition:
+        opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DIVIDER ANIMATION */
+
+.reveal-divider {
+    opacity: 0;
+    transform: translateY(120px);
+    transition:
+        opacity 1.3s ease,
+        transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-divider.show {
+    opacity: 1;
+    transform: translateY(0);
+}

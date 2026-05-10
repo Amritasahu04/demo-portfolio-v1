@@ -744,23 +744,7 @@ body.light-mode .butterfly-svg {
     animation: flapRight 0.8s ease-in-out infinite;
 }
 
-.section-divider {
-    width: 100%;
 
-    height: 1px;
-
-    background:
-    linear-gradient(
-        to right,
-        transparent,
-        rgba(255,45,155,0.25),
-        transparent
-    );
-
-    position: relative;
-
-    z-index: 2;
-}
 
 /* ABOUT */
 #about {
@@ -901,10 +885,14 @@ body.light-mode .butterfly-svg {
 
 .about-info-val {
   color: var(--text);
-
+    font-family: 'Syne', sans-serif;
   font-weight: 600;
 }
 
+.about-card-label,
+.about-info-key {
+    font-family: 'Space Mono', monospace;
+}
 .status-dot {
   display: inline-block;
 
@@ -997,6 +985,8 @@ h2 span {
   transition: 0.35s ease;
 
   min-height: 210px;
+
+   transition-delay: 0.15s;
 }
 
 .skill-card:hover {
@@ -1120,4 +1110,50 @@ h2 span {
 
 .fundamentals-card {
   grid-column: span 1;
+}
+
+.mountain-divider {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: var(--bg);
+    line-height: 0;
+}
+
+.mountain-divider svg {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    display: block;
+}
+
+body.light-mode .mountain-divider path:first-child {
+  fill: rgba(0,0,0,0.06);
+}
+
+.mountain-divider path:first-child {
+    animation: driftSlow 10s linear infinite;
+}
+
+.mountain-divider path:last-child {
+    animation: driftFast 5s linear infinite;
+}
+
+@keyframes driftSlow {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-120px);
+    }
+}
+
+@keyframes driftFast {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-220px);
+    }
 }
