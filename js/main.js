@@ -27,3 +27,61 @@ toggle.addEventListener("click", () => {
         isDark
     );
 });
+
+const cards = document.querySelectorAll(".project-card");
+
+let current = 0;
+
+function updateCards() {
+
+    cards.forEach((card) => {
+
+        card.classList.remove(
+            "active",
+            "next",
+            "next-2"
+        );
+
+    });
+
+    cards[current].classList.add("active");
+
+    cards[(current + 1) % cards.length]
+        .classList.add("next");
+
+    cards[(current + 2) % cards.length]
+        .classList.add("next-2");
+}
+
+
+const nextBtn =
+    document.querySelector(".next-btn");
+
+const prevBtn =
+    document.querySelector(".prev-btn");
+
+
+/* NEXT */
+
+nextBtn.addEventListener("click", () => {
+
+    current =
+        (current + 1) % cards.length;
+
+    updateCards();
+});
+
+/* PREV */
+
+prevBtn.addEventListener("click", () => {
+
+    current =
+        (current - 1 + cards.length)
+        % cards.length;
+
+    updateCards();
+});
+
+updateCards();
+
+updateCards();
