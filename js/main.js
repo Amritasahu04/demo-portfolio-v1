@@ -85,3 +85,84 @@ prevBtn.addEventListener("click", () => {
 updateCards();
 
 updateCards();
+
+async function handleSubmit(e) {
+
+    e.preventDefault();
+
+    const form = e.target;
+
+    const btn = document.querySelector(".send-btn");
+
+    const formData = {
+
+        name: form.name.value,
+
+        email: form.email.value,
+
+        subject: form.subject.value,
+
+        message: form.message.value,
+    };
+
+    try {
+
+        btn.textContent = "SENDING...";
+        btn.disabled = true;
+
+        const response = await fetch(
+            "/.netlify/functions/contact",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+                },
+
+                body: JSON.stringify(formData),
+            }
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            btn.textContent =
+                "MESSAGE SENT ✓";
+
+            btn.style.background =
+                "#22c55e";
+
+            form.reset();
+
+        } else {
+
+            btn.textContent =
+                data.message || "FAILED ✕";
+
+            btn.style.background =
+                "#ef4444";
+        }
+
+    } catch (err) {
+
+        console.error(err);
+
+        btn.textContent = "ERROR ✕";
+
+        btn.style.background = "#ef4444";
+    }
+
+    setTimeout(() => {
+
+        btn.textContent =
+            "SEND MESSAGE →";
+
+        btn.style.background = "";
+
+        btn.disabled = false;
+
+    }, 3000);
+}
+
+window.handleSubmit = handleSubmit;

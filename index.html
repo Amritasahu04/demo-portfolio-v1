@@ -924,7 +924,7 @@
 
             <!-- RIGHT -->
 
-            <form class="contact-form">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
 
                 <div class="input-group">
 
@@ -932,6 +932,7 @@
 
                     <input
                         type="text"
+                        name="name"
                         placeholder="Your name"
                     >
 
@@ -943,6 +944,7 @@
 
                     <input
                         type="email"
+                        name="email"
                         placeholder="your@email.com"
                     >
 
@@ -954,6 +956,7 @@
 
                     <input
                         type="text"
+                        name="subject"
                         placeholder="Internship opportunity / Collaboration / ..."
                     >
 
@@ -964,6 +967,7 @@
                     <label>MESSAGE</label>
 
                     <textarea
+                        name="message"
                         placeholder="Tell me what you have in mind..."
                     ></textarea>
 
