@@ -33,7 +33,7 @@ Mobile responsiveness is under development, so the best experience is on PC/lapt
 
 ## Lighthouse Score
 
-![Lighthouse Score](assets/lighthouse-score.png)
+![Lighthouse Score](assets/lighthouse-score.jpeg)
 
 ##
 
