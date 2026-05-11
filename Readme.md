@@ -33,5 +33,11 @@ Mobile responsiveness is under development, so the best experience is on PC/lapt
 
 ##
 
+<p align="center">
+  <img src="assets/lighthouse-score.png" width="800" alt="Lighthouse Score"/>
+</p>
+
+##
+
 ⚠️ This portfolio is an experimental/demo portfolio built for fun, creative UI exploration, and frontend practice.
 It’s intentionally styled with heavy animations, effects, and a cyberpunk aesthetic — not meant to be my final professional portfolio.
