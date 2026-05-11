@@ -16,7 +16,7 @@ A futuristic developer portfolio built with HTML, CSS & JavaScript featuring:
 - aesthetic typography system
 - hover interactions everywhere
 - section-based transitions
-
+- Built a serverless contact API using Netlify Functions and Resend, enabling real-time portfolio form submissions and email delivery.
 ## Live Demo
 🔗 https://portfolio-v1-amritasahu.netlify.app/
 
