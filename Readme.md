@@ -31,11 +31,9 @@ This portfolio is currently optimized for desktop/laptop screens only.  🖥️
 
 Mobile responsiveness is under development, so the best experience is on PC/laptop screens for now.
 
-##
+## Lighthouse Score
 
-<p align="center">
-  <img src="assets/lighthouse-score.png" width="800" alt="Lighthouse Score"/>
-</p>
+![Lighthouse Score](assets/lighthouse-score.png)
 
 ##
 
